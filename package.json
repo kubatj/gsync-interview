@@ -1,0 +1,35 @@
+{
+  "name": "interview",
+  "version": "1.0.0",
+  "scripts": {
+    "main": "tsx ./src/main.ts",
+    "codegen": "tsx ./codegen/index.ts",
+    "xyz": "eslint xyz/index.ts --max-warnings=0 && tsx xyz/index.ts",
+    "xyz:nolint": "tsx xyz/index.ts",
+    "build": "rimraf dist && tsc --project tsconfig.build.json",
+    "prepack": "rimraf *.tgz && npm run build",
+    "tsc": "tsc",
+    "prettier": "prettier . --check",
+    "prettier:fix": "prettier . --write",
+    "eslint": "eslint . --max-warnings=0",
+    "eslint:fix": "npm run eslint -- --fix",
+    "lint": "npm run prettier && npm run tsc && npm run eslint",
+    "lint:fix": "npm run prettier:fix && npm run eslint:fix",
+    "test": "vitest --passWithNoTests run"
+  },
+  "dependencies": {
+    "zod": "^4.0.5"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "@types/node": "^22.13.1",
+    "rimraf": "^6.0.1",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.3"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  }
+}

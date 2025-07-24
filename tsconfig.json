@@ -1,0 +1,17 @@
+{
+    "extends": ["./tsconfig.build.json"],
+    "include": [
+        "src/**/*.ts",
+        "scripts/**/*.ts",
+        "codegen/**/*.ts",
+        "test/**/*.ts",
+        "xyz/**/*.ts",
+        "eslint.config.js",
+        "vitest.config.ts"
+    ],
+    "exclude": [],
+    "compilerOptions": {
+        "noEmit": true,
+        "checkJs": true
+    }
+}

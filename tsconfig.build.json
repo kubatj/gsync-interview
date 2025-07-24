@@ -1,0 +1,36 @@
+{
+    "include": ["src/**/*.ts"],
+    "exclude": ["**/*.test.ts", "**/__tests__/**"],
+    "compilerOptions": {
+        /* Language and Environment */
+        "target": "ESNext",
+
+        /* Modules */
+        "module": "NodeNext",
+
+        /* Emit */
+        "outDir": "./dist",
+        "noEmit": false,
+        "declaration": true,
+        "sourceMap": true,
+        "declarationMap": false,
+        "removeComments": false,
+
+        /* Interop Constraints */
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "moduleDetection": "force",
+        "isolatedModules": true,
+        "verbatimModuleSyntax": true,
+        "erasableSyntaxOnly": true,
+
+        /* Type Checking */
+        "strict": true,
+        // Too many false positives.
+        "noUncheckedIndexedAccess": false,
+        "noImplicitOverride": true,
+
+        /* Performance */
+        "skipLibCheck": true
+    }
+}
